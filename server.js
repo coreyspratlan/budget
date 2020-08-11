@@ -8,8 +8,7 @@ const PORT = 3000;
 const app = express();
 
 // lines 11 and 12 are for connecting heroku to mongodb so the app can deploy
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB_URI);
+
 
 app.use(logger("dev"));
 
@@ -19,7 +18,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.Promise = global.Promise;
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://corey1:password1@ds015879.mlab.com:15879/heroku_s6vjdt72", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
