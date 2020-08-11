@@ -2,7 +2,7 @@ const FILES_TO_CACHE = [
  "/",
  "/index.html", 
  "/api.js", 
- "/favicon.ico",
+//  "/favicon.ico",
  "/style.css"
 ];
 
