@@ -3,7 +3,8 @@ const FILES_TO_CACHE = [
  "/index.html", 
  "/api.js", 
 //  "/favicon.ico",
- "/style.css"
+ "/style.css",
+ "/db.js"
 ];
 
 const CACHE_NAME = "static-cache-v2";
